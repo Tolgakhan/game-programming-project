@@ -1,3 +1,5 @@
 # game-programming-project
 
-denem
+initial commit
+
+initial commit
