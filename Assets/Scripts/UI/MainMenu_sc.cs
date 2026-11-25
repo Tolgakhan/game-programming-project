@@ -5,11 +5,7 @@ public class MainMenu_sc : MonoBehaviour
 {
     [SerializeField] GameObject mainMenuPanel;
     [SerializeField] GameObject infoMenuPanel;
-    public enum AILevel
-    {
-        None,
-        Trained
-    }
+
    public void exitGame()
     {
         Application.Quit();
@@ -34,12 +30,12 @@ public class MainMenu_sc : MonoBehaviour
 
     public void loadTrainedAI()
     {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("GameTrainedAI");
     }
 
     public void loadNewGame()
     {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("GameUnTrainedAI");
     }
   
 }
