@@ -7,6 +7,14 @@ public class GameStateController_sc
     private static float enemyHealth = 100f;
     private static float playerPower = 0f;
     private static float enemyPower = 0f;
+	
+	[SerializeField] float maxHealth = 100f;
+	[SerializeField] float minHealth = 100f;
+	
+	[SerializeField] float maxPower = 100f;
+	[SerializeField] float minPower = 100f;
+	
+
 
     
     private static GamePhase.gamePhase currentGamePhase;
@@ -38,6 +46,7 @@ public class GameStateController_sc
     public static void decrementPlayerHealth(float dec) // playerHealth azaltma fonksiyonu
     {
         playerHealth -= dec;
+		if(playerHealth<minHealth)playerHealth = minHealth;
     }
 
     #endregion 
@@ -54,6 +63,7 @@ public class GameStateController_sc
     public static void incrementPlayerPower(float inc) // playerPower arttırma fonksiyonu
     {
         playerPower += inc;
+		if(playerPower>maxPower)playerPower = maxPower;
     }
     #endregion
 
@@ -71,6 +81,7 @@ public class GameStateController_sc
     public static void decrementEnemyHealth(float dec)// enemyHealth azaltma fonksiyonu
     {
         enemyHealth -= dec;
+		if(enemyHealth<minHealth)enemyHealth = minHealth;
     }
 
     #endregion
@@ -87,6 +98,7 @@ public class GameStateController_sc
     public static void incrementEnemyPower(float inc)// enemyPower arttırma fonksiyonu
     {
         enemyPower += inc;
+		if(enemyPower>maxPower)enemyPower = maxPower;
     }
     #endregion
 
